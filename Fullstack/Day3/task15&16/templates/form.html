@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    
+    <style>
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        background-color: greenyellow;
+        height:30px;
+        align-items: center;
+        border: 2px solid black;
+        
+    }
+    li a{
+        text-decoration: none;
+        margin: 60px;
+        border:1px solid red;
+        padding: 2px;
+        
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+
+margin-left: 100px;
+
+    }
+    .output{
+        border:2px solid red;
+        margin-top: 60px;
+        height:80px;
+    }
+</style>
+</head>
+<body>
+    <ul>
+        <li><a href="/formpage">Register</a></li>
+        <li><a href="/loginpage">login</a></li>
+    </ul>
+
+    <div class="form">
+        <h3>Student Registration</h3>
+        <hr>
+        <form action="/form" method="post">
+            enter name:<input type="text" name="name">
+            <br>
+            <br>
+            enter roll  :<input type="text" name="roll">
+            <br>
+            <br>
+            enter pass: <input type="text" name="pas">
+            <br><br><input type="submit" value="Register">
+        </form>
+    </div>
+    <div class="output">
+  <h3>
+    
+  </h3>
+    </div>
+</body>
+</html>

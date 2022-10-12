@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+         ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        background-color: greenyellow;
+        height:30px;
+        align-items: center;
+        border: 2px solid black;
+        
+    }
+    li a{
+        text-decoration: none;
+        margin: 60px;
+        border:1px solid red;
+        padding: 2px;
+        
+    }
+    .login{
+        display: flex;
+        flex-direction: column;
+height:100vh;
+justify-content: center;
+align-items: center;
+    }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="/formpage">Register</a></li>
+        <li><a href="/loginpage">login</a></li>
+    </ul>
+
+    <center><h3>Login Page</h3></center>
+    <div class="login">
+
+   
+    <form action="/login"  method="post">
+       
+            enter name:<input type="text" name="name">
+            <br>
+            <br>
+            enter roll  :<input type="text" name="roll">
+            <br>
+            <br>
+            enter pass: <input type="password" name="pas">
+            <br><br><input type="submit" value="Login">
+        
+    </form>
+</div>
+</body>
+</html>
