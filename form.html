@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .book{
+            background-color: chartreuse;
+            font-size: 20px;
+            margin-top:50px;
+            align-items: center;
+            justify-content: center;
+
+            opacity: 1;
+            box-shadow: 10px 10px 10px black;
+            border-radius: 10px;
+            border: 2px solid red;
+
+
+        }
+        body{
+            background-color: coral;
+            height: 100vh;
+        
+            
+        }
+        body h2{
+            background-color: black;
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Give Details Of BOOKS</h2>
+    
+    <div class="book">
+    <table align="center" border="1px" cellpadding="5px" cellspacing="1px">
+        <form action="/add" method="post">
+             <tr><td>
+             Enter Book Name :</td>
+            <td><input type="text" name="name"></td></tr>
+                <tr>
+                    <td>
+                    Enter Author name :</td>
+            <td><input type="text" name="author"></td>
+                </tr>
+
+            <tr>
+            <td>
+                                Select Category :</td>
+                                <td><select name="category" >
+                <option id="1">Computer science</option>
+                <option id="2">electronics</option>
+                <option id="3">Mechanics</option>
+                <option id="4">Machine learning</option>
+                <option id="5">progrmming</option>
+                <option id="6">Artificial inteligence</option>
+                </select></td>
+                </tr>
+                <tr>
+                <td>Related Branch :</td>
+                <td><select name="branch">
+                    <option id="1" value="CSE">CSE</option>
+                    <option id="2" value="ECE">ECE</option>
+                    <option id="3" value="Mech">Mech</option>
+                    <option id="4" value="EEE">EEE</option>
+                    <option id="5" value="AI">AI</option>
+                    <option id="6" value="DS">DS</option>
+                    </select></td>
+                </tr>
+                <tr>
+                <td>For which Year Related :</td>
+                <td><select name="year">
+                    <option id="1" value="1">1</option>
+                    <option id="2" value="2">2</option>
+                    <option id="3" value="3">3</option>
+                    <option id="4" value="4">4</option>
+                    </select></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="ADD BOOK" ></td>
+                </tr>
+
+
+     </form>
+     </table>
+                    
+                    </div>
+</body>
+</html>

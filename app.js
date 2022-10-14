@@ -1,29 +1,42 @@
-const express= require('express');
-//for file system..files load..
+const express=require('express')
+const mysql=require('mysql2')
 
-const fs=require('fs');
+//obj..
+var app=express()
+var conn=mysql.createConnection({
 
+    host:'localhost',
+    user:'root',
+    password:'kits',
+    database:'showri'
+});
 
+//handlers..direct from url...
 
-//obj
-app=express();
+app.get('/data',function(req,res){
 
-//handler...
+    conn.connect(function(err){
+        if(err){
+            throw err;
+        }
+        var sql="select * from book";
+        conn.query(sql,function(err,result){
+            if(err){
+                throw err;
+            }
+            var data=[]
+            for(let i of result){
+                data.push(JSON.stringify(i))
+            }
+            res.end(data.toString());
+        })
 
-app.get('/',function(request,response){
-
-fs.readFile('index.html',function(err,data){
-    //if file not exits..or ..file name not..
-    if (err){
-        throw err;
-    }
-    //if no error then file is in data...
-    response.end(data)
-})
-
+        
+    })
 })
 
 //server..
+
 app.listen(2000,function(){
     console.log('Server Started');
 })
