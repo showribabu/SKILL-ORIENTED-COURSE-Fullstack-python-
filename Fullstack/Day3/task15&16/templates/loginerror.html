@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        body{
-            background-color: brown;
-        }
          ul{
         list-style-type: none;
         display: flex;
@@ -33,6 +30,13 @@ height:100vh;
 justify-content: center;
 align-items: center;
     }
+    .error{
+        background-color: black;
+        color:red;
+        border:2px solid red;
+
+ height:80px;
+    }
     </style>
 </head>
 <body>
@@ -47,7 +51,9 @@ align-items: center;
    
     <form action="/login"  method="post">
        
-            
+            enter name:<input type="text" name="name">
+            <br>
+            <br>
             enter roll  :<input type="text" name="roll">
             <br>
             <br>
@@ -55,6 +61,10 @@ align-items: center;
             <br><br><input type="submit" value="Login">
         
     </form>
+</div>
+
+<div class="error">
+    <h3>InvalidUser.Login error</h3>
 </div>
 </body>
 </html>

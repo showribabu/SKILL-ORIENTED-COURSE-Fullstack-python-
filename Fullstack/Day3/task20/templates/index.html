@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        h3
+    {
+        background-color: greenyellow;
+        color:red;
+        align-items: center;
+        text-align: center;
+        border-radius: 12px;
+    }
+        .form{
+            display: flex;
+            flex-direction: column;
+            background-color: aqua;
+            justify-content: center;
+            align-items: center;
+            color:black;
+            border-radius: 20px;
+        }
+        .form input{
+            border-radius: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    
+    <h3>Student Info</h3>
+    
+    <div class="form">
+    <form action="/form" method="post">
+        enter name:<input type="text" name="name">
+        <br>
+        <br>
+        enter roll  :<input type="text" name="roll">
+        <br>
+        <br>
+       
+        <div class="skills">
+            select Skills:<input type="checkbox" name="1" value="c">C
+        <input type="checkbox" name="2" value="Java">Java
+        <input type="checkbox" name="3" value="Python">Python
+    </div>
+        <br><br>
+        <center>
+        <input type="submit" value="Submit" align="center">
+    </center></form>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

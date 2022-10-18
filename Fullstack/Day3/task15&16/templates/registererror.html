@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Form</title>
+    
     <style>
-        body{
-            background-color: brown;
-        }
-         ul{
+    ul{
         list-style-type: none;
         display: flex;
         flex-direction: row;
@@ -26,14 +24,21 @@
         padding: 2px;
         
     }
-    .login{
+    .form{
         display: flex;
         flex-direction: column;
-height:100vh;
-justify-content: center;
-align-items: center;
+
+margin-left: 100px;
+
     }
-    </style>
+    .output{
+        border:2px solid red;
+        margin-top: 60px;
+        height:80px;
+        background-color: black;
+        color: red;
+    }
+</style>
 </head>
 <body>
     <ul>
@@ -41,20 +46,24 @@ align-items: center;
         <li><a href="/loginpage">login</a></li>
     </ul>
 
-    <center><h3>Login Page</h3></center>
-    <div class="login">
-
-   
-    <form action="/login"  method="post">
-       
-            
+    <div class="form">
+        <h3>Student Registration</h3>
+        <hr>
+        <form action="/form" method="post">
+            enter name:<input type="text" name="name">
+            <br>
+            <br>
             enter roll  :<input type="text" name="roll">
             <br>
             <br>
-            enter pass: <input type="password" name="pas">
-            <br><br><input type="submit" value="Login">
-        
-    </form>
+            enter pass: <input type="text" name="pas">
+            <br><br><input type="submit" value="Register">
+        </form>
+    </div>
+    <div class="output">
+       
+        <h3>Already Register</h3>
+    
 </div>
 </body>
 </html>
